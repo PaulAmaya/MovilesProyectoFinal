@@ -7,31 +7,32 @@
     android:padding="16dp">
 
     <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre Completo" />
+
+    <EditText
         android:id="@+id/editTextEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Correo Electrónico"
-        android:inputType="textEmailAddress"
-        android:text="paul@gmail.com" />
+        android:hint="Correo Electrónico" />
 
     <EditText
         android:id="@+id/editTextPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Contraseña"
         android:inputType="textPassword"
-        android:text="paul1234" />
+        android:hint="Contraseña" />
 
-    <Button
-        android:id="@+id/buttonLogin"
+    <Spinner
+        android:id="@+id/spinnerRole"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Iniciar Sesión" />
+        android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/buttonRegister"
+        android:id="@+id/buttonRegisterUser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Registrarse" />
-
 </LinearLayout>

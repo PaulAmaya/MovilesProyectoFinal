@@ -16,6 +16,9 @@
         android:theme="@style/Theme.PracticaNAvigationDrawer"
         tools:targetApi="31">
         <activity
+            android:name=".ui.activities.RegisterActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.home.RestaurantDetailActivity"
             android:exported="false" />
         <activity

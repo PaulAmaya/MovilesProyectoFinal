@@ -14,7 +14,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Cargar el token de SharedPreferences y configurarlo en RetrofitRepository
         val sessionManager = SessionManager(this)
         val token = sessionManager.getAuthToken()
         if (!token.isNullOrEmpty()) {

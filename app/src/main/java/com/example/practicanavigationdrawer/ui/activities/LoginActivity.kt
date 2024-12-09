@@ -21,6 +21,11 @@ class LoginActivity : AppCompatActivity() {
 
         Log.d("LoginActivity", "onCreate called")
 
+        binding.buttonRegister.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+        }
+
         binding.buttonLogin.setOnClickListener {
             val email = binding.editTextEmail.text.toString()
             val password = binding.editTextPassword.text.toString()

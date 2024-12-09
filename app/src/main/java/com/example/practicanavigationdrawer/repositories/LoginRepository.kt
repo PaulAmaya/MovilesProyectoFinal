@@ -24,11 +24,9 @@ object LoginRepository {
             override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
                 if (response.isSuccessful) {
                     response.body()?.let {
-                        // Guardar el token en SharedPreferences
                         val sessionManager = SessionManager(context)
                         sessionManager.saveAuthToken(it.access_token)
 
-                        // Configurar el token en RetrofitRepository
                         RetrofitRepository.setAuthToken(it.access_token)
 
                         onSuccess(it)

@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 object RetrofitRepository {
 
     private const val BASE_URL = "http://proyectodelivery.jmacboy.com/api/"
-    private var authToken: String = "" // Token dinámico
+    private var authToken: String = ""
 
     fun setAuthToken(token: String) {
         authToken = token
@@ -28,13 +28,13 @@ object RetrofitRepository {
     }
 
     private val client: OkHttpClient = OkHttpClient.Builder()
-        .addInterceptor(headerInterceptor) // Agregar encabezados dinámicos
+        .addInterceptor(headerInterceptor)
         .build()
 
     private val retrofit: Retrofit = Retrofit.Builder()
         .baseUrl(BASE_URL)
         .client(client)
-        .addConverterFactory(GsonConverterFactory.create()) // Convertir JSON automáticamente
+        .addConverterFactory(GsonConverterFactory.create())
         .build()
 
     fun <T> createService(serviceClass: Class<T>): T {
